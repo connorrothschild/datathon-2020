@@ -13,7 +13,7 @@ var config = {
             id: 'title-id',
             // title: 'An overview',
             // image: './path/to/image/source.png',
-            description: '<span style="font-size:24px">Every year, _____? people die of homicide in the United States.</span><br><br><i>Mapping Houston Homicides</i> | By <a target = "_blank" href = "https://connorrothschild.github.io/">Connor Rothschild</a><br><span style = "color:darkgrey;">(Scroll &#x2913; to explore)</span>',
+            description: '<span style="font-size:24px">Every year, 19,510 people die of homicide in the United States.</span><br><br><i>Mapping Houston Homicides</i> | By Connor Rothschild, Denizhan Yigitbas, Shane DiGiovanna, and Roy Phillips.<br><span style = "color:darkgrey;">(Scroll &#x2913; to explore)</span>',
             location: {
                 center: [-111.432,35.975],
                 zoom: 3.7,
@@ -47,12 +47,36 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'deaths-2015-texas',
-                    opacity: .33
+                    opacity: .67
                 }
             ],
             onChapterExit: [
                 {
                     layer: 'deaths-2015-texas',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: 'three-key-areas',
+            // title: 'An overview',
+            // image: './path/to/image/source.png',
+            description: "Here, you’ll notice concentrations of homicides in three key areas. __%? of Texas homicides occur in three cities: Dallas-Fort Worth, San Antonio, and Houston.",
+            location: {
+                center: [-100.04094, 31.28163],
+                zoom: 5,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'three-key-cities',
+                    opacity: .67
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'three-key-cities',
                     opacity: 0
                 }
             ]
