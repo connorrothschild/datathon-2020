@@ -19,3 +19,32 @@ data_2015 %>%
   summarise(sum(num_incidents))
 
 ## 962 incidents in Texas, and 244 took place in Houston. Thus, 25% (1 in 4) Texas homicides took place in Houston.
+
+data_2015 %>% 
+  filter(state == "Texas") %>% 
+  mutate(top_three = ifelse(city_or_county_guardian_corrected == "Houston"|
+                              city_or_county_guardian_corrected == "San Antonio"|
+                              city_or_county_guardian_corrected == "Dallas"|
+                              city_or_county_guardian_corrected == "Fort Worth", 1,0)) %>% 
+  filter(top_three == 1)
+         
+## There are 962 homicides in Texas in 2015.
+## Roughly 50% (450 homicides) of them took place in one of three cities: Houston, San Antonio, or the DFW area.
+
+data_2015 %>% 
+  filter(state == "Texas",
+         city_or_county_guardian_corrected == "Houston")
+
+## Houston: 244
+
+data_2015 %>% 
+  filter(state == "Texas",
+         city_or_county_guardian_corrected == "Dallas" | city_or_county_guardian_corrected == "Fort Worth")
+
+## DFW: 120
+
+data_2015 %>% 
+  filter(state == "Texas",
+         city_or_county_guardian_corrected == "San Antonio")
+
+## San Antonio: 86
