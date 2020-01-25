@@ -537,6 +537,30 @@ var config = {
                 //     opacity: 0
                 // }
             ]
+        },
+        {
+            id: 'final',
+            // title: 'An overview',
+            // image: './path/to/image/source.png',
+            description: "What is the story of Houston homicides? One of injustice, unequal burdens, and unsolved cases.",
+            location: {
+                center: [-95.635, 29.758],
+                zoom: 9.5,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'homicide-houston',
+                    opacity: .5
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'homicide-houston',
+                    opacity: 0
+                }
+            ]
         }
     ]
 }
