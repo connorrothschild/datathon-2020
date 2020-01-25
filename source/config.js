@@ -61,7 +61,7 @@ var config = {
             id: 'three-key-cities',
             title: 'Three Key Areas',
             // image: './path/to/image/source.png',
-            description: "Roughly 50% of Texas homicides occur in three places: Dallas-Fort Worth, San Antonio, and Houston. They make up 21% of the state's population.",
+            description: "While Dallas-Fort Worth, San Antonio, and Houston make up 21% of the state's population, roughly 50% of Texas homicides occur in these three places.",
             location: {
                 center: [-97.541, 29.643],
                 zoom: 5.47,
@@ -139,9 +139,9 @@ var config = {
         // },
         {
             id: 'houston-disposition',
-            // title: 'An overview',
+            title: 'Cases Closed?',
             // image: './images/homicides-over-time.jpg',
-            description: "One variable of interest is 'disposition' of the case, which corresponds to the <i>outcome of the case</i>. Was the perpetrator caught and arrested, did the case end with no arrest, or is it still open? <hr>In this view, <br><span style = 'color:#0FA800;'>&#9679;</span> represent cases closed by arrest, <br><span style = 'color:#A80100;'>&#9679;</span> represent cases closed without arrest, and <br><span style = 'color:#616bff;'>&#9679;</span> represent cases that <i>are still open (unsolved)</i>.",
+            description: "One variable of interest is the 'disposition' of the case, which corresponds to the <strong>outcome</strong> of the case. Was the perpetrator caught and arrested, did the case end with no arrest, or is it still open? <hr>In this view, <br><span style = 'color:#0FA800;'>&#9679;</span> closed by arrest, <br><span style = 'color:#A80100;'>&#9679;</span> closed without arrest, and <br><span style = 'color:#616bff;'>&#9679;</span> <i>still open (unsolved)</i>.",
             location: {
                 center: [-95.635, 29.758],
                 zoom: 9.5,
@@ -236,9 +236,9 @@ var config = {
         },
         {
             id: 'sex-overview',
-            // title: 'An overview',
+            title: 'Sex Disparities',
             // image: './images/age-by-race.jpg',
-            description: "The first variable we observed was sex. <i>Does the sex of a victim make them more or less likely to get killed, and does it affect their chances at justice?</i>",
+            description: "The first variable we observed was sex. <br><br><i>Does the sex of a victim make them more or less likely to get killed, and does it affect their chances at justice?</i>",
             location: {
                 center: [-95.635, 29.758],
                 zoom: 9.5,
@@ -262,7 +262,7 @@ var config = {
             id: 'sex-overview',
             // title: 'An overview',
             // image: './images/age-by-race.jpg',
-            description: "Perhaps unsurprisingly, more men are victims of homicide than women. In this view (where <span style = 'color:#616bff;'>&#9679;</span> represent males and <span style = 'color:red;'>&#9679;</span> represent females), we see that men are the victims of homicide 4.6x as frequently as women.",
+            description: "Perhaps unsurprisingly, more men are victims of homicide than women.<br>In this view (where <span style = 'color:#616bff;'>&#9679;</span> represent males and <span style = 'color:red;'>&#9679;</span> represent females), we see that men are the victims of homicide 4.6x as frequently as women.",
             location: {
                 center: [-95.635, 29.758],
                 zoom: 9.5,
@@ -284,9 +284,9 @@ var config = {
         },
         {
             id: 'sex-real-story',
-            title: 'Men are much more likely to have open cases',
+            title: 'Men are more likely to have open cases',
             image: './images/sex-disposition.jpg',
-            description: "But the real story comes when we look at how <i>sex impacts disposition status</i>. What we find when looking at the data is that men are much more likely to have <strong>open cases</strong> in the wake of their deaths, while women almost always find justice.",
+            description: "But the real story comes when we look at how <i>sex</i> impacts <i>disposition status</i>. What we find when looking at the data is that men are much more likely to have <strong>open cases</strong> in the wake of their deaths, while women find justice much more often.",
             location: {
                 center: [-95.635, 29.758],
                 zoom: 9.5,
@@ -308,7 +308,7 @@ var config = {
         },
         {
             id: 'age-overview',
-            // title: 'An overview',
+            title: 'Differences by Age',
             // image: './images/age-by-race.jpg',
             description: "The next variable we observed was age. <br><i>Does the age of a victim make them more or less likely to get killed, and does it affect their chances at justice?</i><br><br>These bubbles correspond to victim age, with the smallest dot representing our youngest victim (1 year old) and the largest representing the oldest victim (102 years old).",
             location: {
@@ -356,9 +356,9 @@ var config = {
         },
         {
             id: 'age-by-race',
-            title: 'Age of victims',
+            title: 'Age of victims (by race)',
             image: './images/age-by-race.jpg',
-            description: "We find an interesting relationship between race and age. While racial minorities follow a similar relationship when it comes to age and homicide victimhood, no such relationship exists for white victims. A white victim who is 66 years old has approximately the same chance of being killed as a white victim who is 22 years old.<hr>In this view, <br><span style = 'color:#4405ff;'>&#9679;</span> represent Hispanic victims, <br><span style = 'color:#c40303;'>&#9679;</span> represent white victims, <br><span style = 'color:#525252;'>&#9679;</span> represent black victims, and <br><span style = 'color:#c0b302;'>&#9679;</span> represent Asian victims.",
+            description: "While racial minorities follow a similar relationship when it comes to age and homicide victimhood, no such relationship exists for white victims. A white victim who is 66 years old has approximately the same chance of being killed as a white victim who is 22 years old.<hr>In this view, <br><span style = 'color:#4405ff;'>&#9679;</span> represent Hispanic victims, <br><span style = 'color:#c40303;'>&#9679;</span> represent white victims, <br><span style = 'color:#525252;'>&#9679;</span> represent black victims, and <br><span style = 'color:#c0b302;'>&#9679;</span> represent Asian victims.",
             location: {
                 center: [-95.635, 29.758],
                 zoom: 9.5,
@@ -428,12 +428,12 @@ var config = {
         },
         {
             id: 'cluster-one',
-            // title: "Finally, let's focus on race.",
+            title: "South Main",
             // image: './images/age-by-race.jpg',
             description: "One such cluster is in the South Main neighborhood. You'll notice that there is a large concentration of African-American victims, while there are considerably fewer victims of other races.<hr>In this view, <br><span style = 'color:#4405ff;'>&#9679;</span> represent Hispanic victims, <br><span style = 'color:#c40303;'>&#9679;</span> represent white victims, <br><span style = 'color:#525252;'>&#9679;</span> represent black victims, and <br><span style = 'color:#c0b302;'>&#9679;</span> represent Asian victims.",
             location: {
                 center: [-95.383,29.681],
-                zoom: 11.5,
+                zoom: 10,
                 pitch: 0,
                 bearing: 0
             },
@@ -479,15 +479,23 @@ var config = {
             },
             onChapterEnter: [
                 {
-                    layer: 'homicide-houston',
-                    opacity: .5
+                    layer: 'heatmap',
+                    opacity: .9
                 }
+                // {
+                //     layer: 'homicide-houston',
+                //     opacity: .5
+                // }
             ],
             onChapterExit: [
                 {
-                    layer: 'homicide-houston',
+                    layer: 'heatmap',
                     opacity: 0
                 }
+                // {
+                //     layer: 'homicide-houston',
+                //     opacity: 0
+                // }
             ]
         },
         {
@@ -503,15 +511,23 @@ var config = {
             },
             onChapterEnter: [
                 {
-                    layer: 'homicide-houston',
-                    opacity: .5
+                    layer: 'heatmap',
+                    opacity: .9
                 }
+                // {
+                //     layer: 'homicide-houston',
+                //     opacity: .5
+                // }
             ],
             onChapterExit: [
                 {
-                    layer: 'homicide-houston',
+                    layer: 'heatmap',
                     opacity: 0
                 }
+                // {
+                //     layer: 'homicide-houston',
+                //     opacity: 0
+                // }
             ]
         }
     ]
