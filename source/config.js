@@ -61,7 +61,7 @@ var config = {
             id: 'three-key-cities',
             // title: 'An overview',
             // image: './path/to/image/source.png',
-            description: "Here, you’ll notice concentrations of homicides in three key areas. Roughly 50% of Texas homicides occur in three places: Dallas-Fort Worth, San Antonio, and Houston.",
+            description: "Here, you’ll notice concentrations of homicides in three key areas. Roughly 50% of Texas homicides occur in three places: Dallas-Fort Worth, San Antonio, and Houston. They make up 21% of the state's population.",
             location: {
                 center: [-97.541, 29.643],
                 zoom: 5.47,
@@ -117,7 +117,7 @@ var config = {
             id: 'houston-over-time',
             title: 'Homicides over time',
             image: './images/homicides-over-time.jpg',
-            description: "Houston homicides have remained relatively stagnant since 2007 (the first year this data is available). We observe a minor dip between 2011 and 2013, which mimicked the trend nationally.",
+            description: "Houston homicides have remained relatively stagnant since 2007 (the first year this data is available). We observe a minor dip between 2011 and 2013, which mimic the national trend.",
             location: {
                 center: [-95.635, 29.758],
                 zoom: 9.5,
@@ -141,7 +141,7 @@ var config = {
             id: 'houston-disposition',
             // title: 'An overview',
             // image: './images/homicides-over-time.jpg',
-            description: "One variable of interest is 'disposition' of the case, which corresponds to the <i>resolution of the perpetrators' case</i>. Was the perpetrator caught and arrested, did the case end with no arrest, or is it still open? <hr>In this view, <br><span style = 'color:#0FA800;'>&#9679;</span> represent cases closed by arrest, <br><span style = 'color:#A80100;'>&#9679;</span> represent cases closed without arrest, and <br><span style = 'color:#616bff;'>&#9679;</span> represent cases that <i>are still open (unsolved)</i>.",
+            description: "One variable of interest is 'disposition' of the case, which corresponds to the <i>outcome of the case</i>. Was the perpetrator caught and arrested, did the case end with no arrest, or is it still open? <hr>In this view, <br><span style = 'color:#0FA800;'>&#9679;</span> represent cases closed by arrest, <br><span style = 'color:#A80100;'>&#9679;</span> represent cases closed without arrest, and <br><span style = 'color:#616bff;'>&#9679;</span> represent cases that <i>are still open (unsolved)</i>.",
             location: {
                 center: [-95.635, 29.758],
                 zoom: 9.5,
@@ -185,35 +185,36 @@ var config = {
                 }
             ]
         },
-        {
-            id: 'houston-disposition-year',
-            title: 'Disposition over time',
-            image: './images/disposition-over-time.jpg',
-            description: "But, the data suggests that there's recently been an uptick in unsolved cases. <hr>In this view, <br><span style = 'color:#0FA800;'>&#9679;</span> represent cases closed by arrest, <br><span style = 'color:#A80100;'>&#9679;</span> represent cases closed without arrest, and <br><span style = 'color:#616bff;'>&#9679;</span> represent cases that <i>are still open (unsolved)</i>.",
-            location: {
-                center: [-95.635, 29.758],
-                zoom: 9.5,
-                pitch: 0,
-                bearing: 0
-            },
-            onChapterEnter: [
-                {
-                    layer: 'homicide-houston-disposition',
-                    opacity: .5
-                }
-            ],
-            onChapterExit: [
-                {
-                    layer: 'homicide-houston-disposition',
-                    opacity: 0
-                }
-            ]
-        },
+        // {
+        //     id: 'houston-disposition-year',
+        //     title: 'Disposition over time',
+        //     image: './images/disposition-over-time.jpg',
+        //     description: "But, the data suggests that there's recently been an uptick in unsolved cases. <hr>In this view, <br><span style = 'color:#0FA800;'>&#9679;</span> represent cases closed by arrest, <br><span style = 'color:#A80100;'>&#9679;</span> represent cases closed without arrest, and <br><span style = 'color:#616bff;'>&#9679;</span> represent cases that <i>are still open (unsolved)</i>.",
+        //     location: {
+        //         center: [-95.635, 29.758],
+        //         zoom: 9.5,
+        //         pitch: 0,
+        //         bearing: 0
+        //     },
+        //     onChapterEnter: [
+        //         {
+        //             layer: 'homicide-houston-disposition',
+        //             opacity: .5
+        //         }
+        //     ],
+        //     onChapterExit: [
+        //         {
+        //             layer: 'homicide-houston-disposition',
+        //             opacity: 0
+        //         }
+        //     ]
+        // },
         {
             id: 'question-disposition',
-            title: 'The Question',
+            // title: "What variables might affect the resolution of one's case? Is justice applied equally across different sexes, ages, and race?",
             // image: './images/disposition-over-time.jpg',
-            description: "What variables might affect the resolution of one's case? Is justice applied equally across different races, ages, and sexes? Or are there demographic differences which mimic broader societal disparaties?",
+            description: "<span style = 'font-size:22px;font-weight:bold;'>What variables might affect the resolution of one's case?<br><br>Is justice applied equally across different sexes, ages, and race?</span>",
+            //Or are there demographic differences which mimic broader societal disparaties?",
             location: {
                 center: [-95.635, 29.758],
                 zoom: 9.5,

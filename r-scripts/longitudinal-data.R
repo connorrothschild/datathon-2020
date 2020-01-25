@@ -55,7 +55,34 @@ htx_data %>%
 
 htx_data %>% 
   ggplot(aes(x = victim_age)) +
-  geom_histogram(stat = "count")
+  geom_histogram(fill = "red") +
+  stat_count(fill = "red") +
+  scale_x_continuous(breaks = c(15,30, 45,60,75)) +
+  cr::fix_bars() +
+  theme(
+    plot.background = element_rect(fill = "black"),
+    panel.background = element_rect(fill = "black",
+                                    colour = "black",
+                                    size = 0.5, linetype = "solid"),
+    panel.grid.major = element_line(size = 0, linetype = 'solid',
+                                    colour = "black"), 
+    panel.grid.minor = element_line(size = 0, linetype = 'solid',
+                                    colour = "black"),
+    plot.title = element_text(colour = "white", margin = margin(0,0,25,0)),
+    axis.text = element_text(colour = "white", family = "Inter"),
+    axis.line = element_line(colour = "white"),
+    axis.ticks = element_line(colour = "white"),
+    text = element_text(colour = "white", family = "Inter")
+  ) +
+  labs(title = "Age of victims",
+       x = "Age (years)",
+       y = element_blank())
+
+htx_data %>% filter(victim_age %in% c(15:20))
+# 331 people aged 15-20
+htx_data %>% filter(victim_age %in% c(10:14))
+# 29 people aged 10-14
+
 
 htx_data %>% 
   ggplot(aes(x = reported_date)) +
@@ -207,6 +234,35 @@ htx_data %>%
     strip.background = element_rect(fill="black")
   ) +
   labs(title = "Males are much more likely to have open cases",
+       # subtitle = "By Race",
+       x = element_blank(), y = element_blank())
+
+htx_data %>% 
+  filter(victim_sex == "Female") %>% 
+  group_by(disposition) %>% 
+  ggplot(aes(x = disposition)) +
+  geom_bar(fill = "red") +
+  coord_flip() +
+  # facet_wrap(~victim_sex, scales = "free_y") +
+  cr::fix_bars() +
+  theme(
+    plot.background = element_rect(fill = "black"),
+    panel.background = element_rect(fill = "black",
+                                    colour = "black",
+                                    size = 0.5, linetype = "solid"),
+    panel.grid.major = element_line(size = 0, linetype = 'solid',
+                                    colour = "black"), 
+    panel.grid.minor = element_line(size = 0, linetype = 'solid',
+                                    colour = "black"),
+    plot.title = element_text(colour = "white", margin = margin(0,0,25,0)),
+    axis.text = element_text(colour = "white", family = "Inter"),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    axis.line = element_line(colour = "white"),
+    axis.ticks = element_line(colour = "white"),
+    text = element_text(colour = "white", family = "Inter"),
+    strip.background = element_rect(fill="black")
+  ) +
+  labs(title = "Female",
        # subtitle = "By Race",
        x = element_blank(), y = element_blank())
 
