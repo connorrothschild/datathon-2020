@@ -13,7 +13,7 @@ var config = {
             id: 'title-id',
             // title: 'An overview',
             // image: './path/to/image/source.png',
-            description: '<span style="font-size:24px">Every year, 19,510 people die of homicide in the United States.</span><br><br><span style="font-size:18px">How does Houston compare?</span><br><br><i>Mapping Houston Homicides</i> | By Connor Rothschild, Denizhan Yigitbas, Shane DiGiovanna, and Roy Phillips.<br><span style = "color:darkgrey;">(Scroll &#x2913; to explore)</span>',
+            description: '<span style="font-size:24px">Every year, 19,510 people die of homicide in the United States.</span><br><br><span style="font-size:18px"><i>How does Houston compare?</i></span><br><br><i>Mapping Houston Homicides</i> | By Connor Rothschild, Denizhan Yigitbas, Shane DiGiovanna, and Roy Phillips.<br><span style = "color:darkgrey;">(Scroll &#x2913; to explore)</span>',
             location: {
                 center: [-111.432,35.975],
                 zoom: 3.7,
@@ -411,13 +411,37 @@ var config = {
             ]
         },
         {
-            id: 'race-explained',
-            // title: "Finally, let's focus on race.",
-            // image: './images/age-by-race.jpg',
-            description: "We immediately notice two things: <br>First, there are many more black (<span style = 'color:#525252;'>&#9679;</span>) and Hispanic (<span style = 'color:#4405ff;'>&#9679;</span>) victims than there are white (<span style = 'color:#c40303;'>&#9679;</span>) ones. <br> And second, there tends to be clusters of similar-race victims in certain areas of Houston. <hr>In this view, <br><span style = 'color:#4405ff;'>&#9679;</span> represent Hispanic victims, <br><span style = 'color:#c40303;'>&#9679;</span> represent white victims, <br><span style = 'color:#525252;'>&#9679;</span> represent black victims, and <br><span style = 'color:#c0b302;'>&#9679;</span> represent Asian victims.",
+            id: 'race-breakdown',
+            title: "Unequal Losses",
+            image: './images/by-race.jpg',
+            description: "We first notice that there are many more black (<span style = 'color:#525252;'>&#9679;</span>) and Hispanic (<span style = 'color:#4405ff;'>&#9679;</span>) victims than there are white (<span style = 'color:#c40303;'>&#9679;</span>) ones. <hr>In this view, <br><span style = 'color:#4405ff;'>&#9679;</span> represent Hispanic victims, <br><span style = 'color:#c40303;'>&#9679;</span> represent white victims, <br><span style = 'color:#525252;'>&#9679;</span> represent black victims, and <br><span style = 'color:#c0b302;'>&#9679;</span> represent Asian victims.",
             location: {
                 center: [-95.635, 29.758],
                 zoom: 9.5,
+                pitch: 0,
+                bearing: 0
+            },
+            onChapterEnter: [
+                {
+                    layer: 'homicide-race',
+                    opacity: .65
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'homicide-race',
+                    opacity: 0
+                }
+            ]
+        },
+        {
+            id: 'race-explained',
+            // title: "Finally, let's focus on race.",
+            // image: './images/age-by-race.jpg',
+            description: "We also notice that there are clusters of similar-race victims in certain areas of Houston. <hr>In this view, <br><span style = 'color:#4405ff;'>&#9679;</span> represent Hispanic victims, <br><span style = 'color:#c40303;'>&#9679;</span> represent white victims, <br><span style = 'color:#525252;'>&#9679;</span> represent black victims, and <br><span style = 'color:#c0b302;'>&#9679;</span> represent Asian victims.",
+            location: {
+                center: [-95.635, 29.758],
+                zoom: 10,
                 pitch: 0,
                 bearing: 0
             },
