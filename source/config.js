@@ -22,6 +22,10 @@ var config = {
             },
             onChapterEnter: [
                 {
+                    layer: 'cluster-one-fill',
+                    opacity: 0
+                },
+                {
                     layer: 'deaths-2015',
                     opacity: .33
                 }
@@ -29,6 +33,10 @@ var config = {
             onChapterExit: [
                 {
                     layer: 'deaths-2015',
+                    opacity: 0
+                },
+                {
+                    layer: 'cluster-one-fill',
                     opacity: 0
                 }
             ]
@@ -433,7 +441,7 @@ var config = {
             description: "One such cluster is in the South Main neighborhood. You'll notice that there is a large concentration of African-American victims, while there are considerably fewer victims of other races.<hr>In this view, <br><span style = 'color:#4405ff;'>&#9679;</span> represent Hispanic victims, <br><span style = 'color:#c40303;'>&#9679;</span> represent white victims, <br><span style = 'color:#525252;'>&#9679;</span> represent black victims, and <br><span style = 'color:#c0b302;'>&#9679;</span> represent Asian victims.",
             location: {
                 center: [-95.383,29.681],
-                zoom: 10,
+                zoom: 11,
                 pitch: 0,
                 bearing: 0
             },
@@ -448,7 +456,7 @@ var config = {
                 },
                 {
                     layer: 'cluster-one-fill',
-                    opacity: .7
+                    opacity: .5
                 }
             ],
             onChapterExit: [
