@@ -37,7 +37,7 @@ var config = {
             id: 'texas-focus',
             // title: 'An overview',
             // image: './path/to/image/source.png',
-            description: "Here's Texas.",
+            description: "<span style = 'font-size:20px;font-weight:bold;'>Of these homicides, roughly 6% of them are committed in Texas.</span>",
             location: {
                 center: [-100.04094, 31.28163],
                 zoom: 5,
@@ -59,9 +59,9 @@ var config = {
         },
         {
             id: 'three-key-cities',
-            // title: 'An overview',
+            title: 'Three Key Areas',
             // image: './path/to/image/source.png',
-            description: "Here, you’ll notice concentrations of homicides in three key areas. Roughly 50% of Texas homicides occur in three places: Dallas-Fort Worth, San Antonio, and Houston. They make up 21% of the state's population.",
+            description: "Roughly 50% of Texas homicides occur in three places: Dallas-Fort Worth, San Antonio, and Houston. They make up 21% of the state's population.",
             location: {
                 center: [-97.541, 29.643],
                 zoom: 5.47,
@@ -113,30 +113,30 @@ var config = {
                 }
             ]
         },
-        {
-            id: 'houston-over-time',
-            title: 'Homicides over time',
-            image: './images/homicides-over-time.jpg',
-            description: "Houston homicides have remained relatively stagnant since 2007 (the first year this data is available). We observe a minor dip between 2011 and 2013, which mimic the national trend.",
-            location: {
-                center: [-95.635, 29.758],
-                zoom: 9.5,
-                pitch: 0,
-                bearing: 0
-            },
-            onChapterEnter: [
-                {
-                    layer: 'homicide-houston',
-                    opacity: .5
-                }
-            ],
-            onChapterExit: [
-                {
-                    layer: 'homicide-houston',
-                    opacity: 0
-                }
-            ]
-        },
+        // {
+        //     id: 'houston-over-time',
+        //     title: 'Homicides over time',
+        //     image: './images/homicides-over-time.jpg',
+        //     description: "Houston homicides have remained relatively stagnant since 2007 (the first year this data is available). We observe a minor dip between 2011 and 2013, which mimic the national trend.",
+        //     location: {
+        //         center: [-95.635, 29.758],
+        //         zoom: 9.5,
+        //         pitch: 0,
+        //         bearing: 0
+        //     },
+        //     onChapterEnter: [
+        //         {
+        //             layer: 'homicide-houston',
+        //             opacity: .5
+        //         }
+        //     ],
+        //     onChapterExit: [
+        //         {
+        //             layer: 'homicide-houston',
+        //             opacity: 0
+        //         }
+        //     ]
+        // },
         {
             id: 'houston-disposition',
             // title: 'An overview',
@@ -165,7 +165,7 @@ var config = {
             id: 'houston-disposition-counts',
             title: 'Disposition status',
             image: './images/disposition-status.jpg',
-            description: "As these dots show, the number of solved and unsolved homicides are roughly the same.<hr>In this view, <br><span style = 'color:#0FA800;'>&#9679;</span> represent cases closed by arrest, <br><span style = 'color:#A80100;'>&#9679;</span> represent cases closed without arrest, and <br><span style = 'color:#616bff;'>&#9679;</span> represent cases that <i>are still open (unsolved)</i>.",
+            description: "As these dots show, the number of solved and unsolved homicides are roughly the same.<hr>In this view, <br><span style = 'color:#0FA800;'>&#9679;</span> closed by arrest, <br><span style = 'color:#A80100;'>&#9679;</span> closed without arrest, and <br><span style = 'color:#616bff;'>&#9679;</span> <i>still open (unsolved)</i>.",
             location: {
                 center: [-95.635, 29.758],
                 zoom: 9.5,

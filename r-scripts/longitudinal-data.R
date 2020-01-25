@@ -29,8 +29,10 @@ htx_data %>%
 htx_data %>% 
   ggplot(aes(x = disposition)) +
   geom_bar(fill = "red") +
+  # scale_fill_manual(values = c("#14D006", "#ff3333", "#1306fe")) +
   cr::fix_bars() +
   theme(
+    legend.position = "none",
     plot.background = element_rect(fill = "black"),
     panel.background = element_rect(fill = "black",
                                     colour = "black",
@@ -45,7 +47,7 @@ htx_data %>%
     axis.ticks = element_line(colour = "white"),
     text = element_text(colour = "white", family = "Inter")
   ) +
-  labs(title = "Disposition Status",
+  labs(title = element_blank(),
        x = element_blank(),
        y = element_blank())
 
@@ -126,7 +128,7 @@ htx_data %>%
   group_by(victim_race) %>% 
   ggplot(aes(x = disposition)) +
   geom_bar() +
-  facet_wrap(~victim_race)
+  facet_wrap(~victim_race, scales = "free_y")
 
 htx_data %>% 
   group_by(disposition) %>% 
@@ -213,8 +215,8 @@ htx_data %>%
   group_by(disposition) %>% 
   ggplot(aes(x = disposition)) +
   geom_bar(fill = "red") +
-  coord_flip() +
-  facet_wrap(~victim_sex, scales = "free_y") +
+  # coord_flip() +
+  facet_wrap(~victim_sex, scales = "free_y", nrow = 2) +
   cr::fix_bars() +
   theme(
     plot.background = element_rect(fill = "black"),
