@@ -8,9 +8,9 @@
 
 ### Project Data Sources
 
-1. [Kinder Institute UDP]https://www.kinderudp.org/#/datasetCatalog/b342j2xvr2ad
+1. [Kinder Institute UDP](https://www.kinderudp.org/#/datasetCatalog/b342j2xvr2ad)
 
-2. [The Guardian]https://www.theguardian.com/world/2017/mar/20/mapping-gun-murders-micro-level-new-data-2015
+2. [The Guardian](https://www.theguardian.com/world/2017/mar/20/mapping-gun-murders-micro-level-new-data-2015)
 
 ## Inspiration
 
